@@ -1,0 +1,97 @@
+
+h2.titre{
+    cursor: pointer;
+    color: grey;
+    margin: 0 0 0 7px;
+}
+
+.button{
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: blue;
+    border-radius: 10px;
+}
+#primary{
+    background-color: green;
+}
+#secondary{
+    background-color: red;
+}
+
+#secondary span{
+    background-color: black;
+    color: #fff;
+}
+#secondary span#nom{
+    text-transform: uppercase;
+}
+#zzz{
+    background-color: yellowgreen;
+}
+.annimated{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+    border-radius: 300px
+}
+.annimated:hover{
+    transform: rotate(360deg);
+    background-color: gold;
+    width: 600px;
+    height: 200px;
+    transition: all 2s;
+    box-shadow: -20px -15px 5px 5px black;
+    
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) /*quand on est entre 200px et 640px applique button */ {
+    .annimated {
+        display: none;
+        /*visibility:hidden;*/ 
+    }
+    }
+.route{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+
+@media screen and (min-width:200px) and (max-width: 399px){
+    .route {
+    opacity: 0.1;
+}
+}
+@media screen and (min-width:400px) and (max-width: 599px){
+    .route {
+    opacity: 0.32;  
+}
+}
+@media screen and (min-width:600px) and (max-width: 799px){
+    .route {
+    opacity: 0.64;  
+}
+}
+@media screen and (min-width:800px) and (max-width: 999px){
+    .route {
+    opacity: 0.8;  
+}
+}
+@media screen and (min-width:200px) and (max-width: 399px){
+    .route {
+    opacity: 1;}}
+ 
+header{
+    display: flex;
+    height: 50px;
+    background-color: cadetblue;
+    
+}
+header.div {
+    flex: 1;
+    align-self: center
+    
+}
+
