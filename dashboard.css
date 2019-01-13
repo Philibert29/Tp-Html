@@ -1,0 +1,202 @@
+
+
+.skills {
+  position: relative;
+  width: 50em;
+  height: 24em;
+  margin: 2em auto;
+
+  background-color: $c-beschriftung;
+
+  font-size: 1.2rem;
+  
+  h2 {
+    text-align: center;
+  }
+
+  .skills-y  {
+    float: left;
+    width: 8em;
+
+    background-color: $c-beschriftung;
+
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      li {
+        position: relative;
+        display: block;
+        height: 4em;
+
+        line-height: 4em;
+        white-space: nowrap;
+
+        &::before {
+          position: absolute;
+          z-index: 300;
+          content: "";
+          width: 0.4em;
+          height: 0.1em;
+          top: 1.95em;
+          right: -0.2em;
+
+          background-color: $c-axis;
+        }
+      }
+    }
+  }
+
+  .skills-bars {
+    position: relative;
+    float: left;
+    width: 42em;
+    height: 20em;
+
+    border-bottom: 0.1em solid $c-axis;
+    border-left: 0.1em solid $c-axis;
+
+    background-color: grey;
+
+    box-shadow: inset 5px 7px 12px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      border-left: 0.4em solid $c-axis;
+      border-bottom: 0.7em solid #555;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      li {
+        position: relative;
+        display: block;
+        float: left;
+        width: $bar-width;
+        margin: 0 (7em - $bar-width)/2;
+
+        background-color: $red;
+        background-image: linear-gradient(
+          to right,
+          lighten($red, 5%) 0%,
+          $red 30%,
+          darken($red, 25%) 100%
+        );
+
+        box-shadow: 15px 5px 12px -10px rgba(0, 0, 0, 0.5);
+
+        &.skills-bar--html {
+          margin-left: ((7em - $bar-width)/2 ) - 0.1em;
+          height: $bar-html;
+          margin-top: 19.65em - $bar-html;
+        }
+        &.skills-bar--css {
+          height: $bar-css;
+          margin-top: 19.65em - $bar-css;
+        }
+        &.skills-bar--js {
+          height: $bar-js;
+          margin-top: 19.65em - $bar-js;
+        }
+        &.skills-bar--php {
+          height: $bar-php;
+          margin-top: 19.65em - $bar-php;
+        }
+        &.skills-bar--design {
+          height: $bar-design;
+          margin-top: 19.65em - $bar-design;
+        }
+        &.skills-bar--random {
+          height: $bar-random;
+          margin-top: 19.65em - $bar-random;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -0.25em;
+          left: 0;
+          width: $bar-width;
+          height: 0.5em;
+
+          border-radius: 50%;
+
+          background-color: $red;
+          background-image: linear-gradient(
+            to right,
+            lighten($red, 5%) 0%,
+            $red 30%,
+            darken($red, 25%) 100%
+          );
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          top: -0.25em;
+          left: 0;
+          width: $bar-width;
+          height: 0.5em;
+
+          border-radius: 50%;
+
+          background-color: lighten($red, 8%);
+        }
+      }
+    }
+  }
+
+  .skills-x {
+    float: right;
+    width: 42em;
+    height: 4em;
+
+    background-color: $c-beschriftung;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      li {
+        position: relative;
+        display: block;
+        float: left;
+        width: 7em;
+        padding-top: 1em;
+
+        text-align: center;
+
+        /* &::before {
+          position: absolute;
+          z-index: 300;
+          content: "";
+          height: 0.4em;
+          width: 0.1em;
+          left: 3.45em;
+          top: -0.2em;
+
+          background-color: $c-axis;
+        } */
+      }
+    }
+  }
+}
+
